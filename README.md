@@ -45,43 +45,40 @@ Split and merge HSV Image
 ### i) Read and display the image
 
 ```python
-    import cv2
-    image=cv2.imread('bird.jpg',1)
+     import cv2
+    image=cv2.imread('photo.jpg',1)
     image=cv2.resize(image,(300,300))
     cv2.imshow('Arun',image)
     cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    cv2.destroyAllWindows() 
+
 ```
-![1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/29d419d6-8ce6-4121-aad6-b2a33669d4c7)
 
-![1,1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/b61a4a4c-1115-4453-a357-3b8c53fc0145)
 
+![exp1 1 1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/1dc9e30c-f57a-42bc-8f5a-7a00dbbdea3c)
 
 ### ii)Write the image
 
 ```python
-    import cv2
-    image=cv2.imread('bird.jpg',0)
+   image=cv2.imread('photo.jpg',0)
     cv2.imwrite('demos.jpg',image)
 ```
-![2](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/904ec4b0-5dbb-484a-bf33-92b917b0128f)
+![image](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/7599ed25-96a7-4092-9071-b3061a564cd8)
 
 ### iii)Shape of the Image
 
 ```python
-    import cv2
-    image=cv2.imread('bird.jpg',1)
+    image=cv2.imread('photo.jpg',1)
     print(image.shape)
 ```
-![3](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/c1935940-6e94-4b50-9918-f1e001a34884)
+![exp1 3](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/77c553e3-564c-4c4d-8973-5a80a217317e)
 
 
 ### iv)Access rows and columns
 
 ```python
 import random
-    import cv2
-    image=cv2.imread('bird.jpg',1)
+    image=cv2.imread('photo.jpg',1)
     image=cv2.resize(image,(500,500))
     for i in range (250,500):
       for j in range(image.shape[1]):
@@ -92,63 +89,55 @@ import random
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ```
-![4,1](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/35fd63af-0fe4-40f2-9b2e-29d93f2faf8d)
+![exp1 4 1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/2dc2f552-8a10-46f6-a5e8-cf7848954243)
 
-![4](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/f6ac6cfa-9968-484f-b960-2c1f06d16f0f)
 
 
 ### v)Cut and paste portion of image
 
 ```python
-  import cv2
-  image=cv2.imread('bird.jpg',1)
-  image=cv2.resize(image,(300,300))
-  tag =image[150:200,110:160]
-  image[110:160,150:200] = tag
-  cv2.imshow('arun',image)
-  cv2.waitKey(0)
-  cv2.destroyAllWindows()
+    image=cv2.imread('photo.jpg',1)
+    image=cv2.resize(image,(300,300))
+    tag =image[150:200,110:160]
+    image[110:160,150:200] = tag
+    cv2.imshow('image1',image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 ```
-![5](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/85c50e8a-d8bc-4540-ba6b-96895fc26318)
+![exp1 5 1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/fbb5ec1c-c698-4f25-b80a-c816c0b4c58e)
 
-
-![5,1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/7c5449bb-d4bb-4dd3-8233-bf24a580f221)
 
 
 ### vi) BGR and RGB to HSV and GRAY
 
 ```python
-import cv2
-img = cv2.imread('bird.jpg',1)
-img = cv2.resize(img,(200,200))
-cv2.imshow('Original Image',img)
+    img = cv2.imread('photo.jpg',1)
+    img = cv2.resize(img,(200,200))
+    cv2.imshow('Original Image',img)
 
-hsv1 = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-cv2.imshow('BGR2HSV',hsv1)
+    hsv1 = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+    cv2.imshow('BGR2HSV',hsv1)
 
-hsv2 = cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
-cv2.imshow('RGB2HSV',hsv2)
-
-gray1 = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-cv2.imshow('BGR2GRAY',gray1)
-
-gray2 = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
-cv2.imshow('RGB2GRAY',gray2)
-
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+    hsv2 = cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+    cv2.imshow('RGB2HSV',hsv2)
+    
+    gray1 = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    cv2.imshow('BGR2GRAY',gray1)
+    
+    gray2 = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
+    cv2.imshow('RGB2GRAY',gray2)
+    
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 ```
+![exp1 6 1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/13550f72-b8bd-4486-b972-0030a322b369)
 
-![6,1](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/3dab3594-1706-4569-97c6-de2f9a27290f)
-
-![6](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/5a970b7f-263b-4ef0-8e8c-186bc7d5d725)
 
 
 ### vii) HSV to RGB and BGR
 
 ```python
-import cv2
-img = cv2.imread('bird.jpg')
+img = cv2.imread('photo.jpg')
 img = cv2.resize(img,(200,200))
 
 img = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -163,16 +152,14 @@ cv2.imshow('HSV2RGB',BGR)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![7,1](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/db2cc7ef-6d5b-49ca-a18b-65369e55f284)
 
-![7](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/b7fbe4db-3c21-4855-87a2-cbd309cc67ab)
+![exp1 7 1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/93b2af60-57b6-47bd-b96e-dd7f3ff6ca61)
 
 
 ### viii) RGB and BGR to YCrCb
 
 ```python
-import cv2
-img = cv2.imread('bird.jpg')
+img = cv2.imread('photo.jpg')
 img = cv2.resize(img,(200,200))
 cv2.imshow('Original RGB Image',img)
 
@@ -185,15 +172,12 @@ cv2.imshow('BGR-2-YCrCb',YCrCb2)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![8](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/2a94ab38-84c3-4b73-8ac7-6c9a6f544603)
 
-![8,1](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/3d295ea6-f6f8-4a40-9855-9d714cf1b0ed)
-
+![exp1 8 1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/46a08bdb-e58b-4f12-950e-2628d53cf045)
 
 ### ix) Split and merge RGB Image
 ```python
-import cv2
-img = cv2.imread('bird.jpg',1)
+img = cv2.imread('photo.jpg',1)
 img = cv2.resize(img,(200,200))
 
 R = img[:,:,2]
@@ -210,14 +194,11 @@ cv2.imshow('Merged RGB image',merged)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![9,1](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/2d600ab5-0304-4181-b2ae-297d488f5bb7)
-
-![9](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/1a047d92-11e0-4c2f-9172-77fde0b60b79)
+![exp1 9 1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/365d891a-1c25-4b5c-8ea3-5765b886e5c9)
 
 ### x) Split and merge HSV Image
 ```python
-import cv2
-img = cv2.imread("bird.jpg",1)
+img = cv2.imread("photo.jpg",1)
 img = cv2.resize(img,(200,200))
 img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
 
@@ -233,10 +214,9 @@ cv2.imshow('Merged',merged)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
-![10](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/530f8e77-6db6-4fc4-a5ea-1e39bef32a1a)
+![exp1 10 1](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/96ad2fd3-1b39-4a35-837f-8b1d12fbb36a)
 
-![10,1](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/d93b352f-7a52-406c-a2a6-47c91616c1ce)
 
 
 ## Result:
-Thus the images are read, displayed, and written ,and color conversion was performed between RGB, HSV and YCbCr color models successfully using the python program.
+Thus the images are read, displayed, and written ,and color conversion was performed between RGB, HSV and YCbCr color models successfully using the python program.
