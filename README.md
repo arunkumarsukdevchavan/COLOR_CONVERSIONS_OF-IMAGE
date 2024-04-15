@@ -63,7 +63,8 @@ Split and merge HSV Image
    image=cv2.imread('photo.jpg',0)
     cv2.imwrite('demos.jpg',image)
 ```
-![image](https://github.com/Yogeshvar005/COLOR_CONVERSIONS_OF-IMAGE/assets/113497367/7599ed25-96a7-4092-9071-b3061a564cd8)
+![exp1 2](https://github.com/arunkumarsukdevchavan/COLOR_CONVERSIONS_OF-IMAGE/assets/118343978/97133f4b-05c4-4b16-8a64-52239be0bb7b)
+
 
 ### iii)Shape of the Image
 
